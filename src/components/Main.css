@@ -1,0 +1,42 @@
+
+.card-color-0 {
+  background-color: #c6e6ff !important; 
+}
+
+.card-color-1 {
+  background-color: #ffe0b3 !important; 
+}
+
+.card-color-2 {
+  background-color: #d0ffcf !important; 
+}
+
+
+
+.card-img-wrapper {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-img-fixed {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-img-wrapper:hover .card-img-fixed {
+  transform: scale(1.08);
+}
+
+.carousel-img {
+  height: 70vh;
+  object-fit: cover;
+}
+
+.carousel-container {
+  margin-bottom: 2rem;
+}

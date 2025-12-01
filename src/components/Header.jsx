@@ -9,7 +9,7 @@ const Header = () => {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#home">
-            {/* <PiStudentDuotone style={{ marginRight: '1rem' }} /> Censo Escolar */}
+            {}
             <PiStudentDuotone className="distancialogo" /> Censo Escolar
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
