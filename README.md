@@ -1,16 +1,35 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🏫 MinhaAppReact
 
-Currently, two official plugins are available:
+Este projeto exibe os colégios com **maiores matrículas** no estado da Paraíba.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📊 Fonte dos Dados
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Os dados utilizados **não são de uma API ao vivo**. O sistema lê um arquivo JSON estático (`dados_censo_pb.json`), que foi gerado por um script Python chamado **app.py**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Processamento dos Dados
+
+Como o arquivo JSON contém todas as escolas do estado, o filtro final é feito no navegador pelo React:
+
+- 🔢 **Ordenação (`.sort`)**: Organiza os colégios em ordem decrescente pelo número total de matrículas (`qt_mat_bas`).
+- 🎯 **Ranking (`.slice`)**: Seleciona as 3 primeiras escolas do ranking para exibição.
+
+---
+
+## 🖼️ Gestão das Imagens das Escolas
+
+Como os dados oficiais não possuem imagens das escolas, implementamos a seguinte lógica:
+
+- 📚 **Dicionário de imagens**: Mapeia o ID da escola (`co_entidade`) para uma URL de imagem específica.
+- 🖼️ **Imagem padrão (Fallback)**: Caso não haja imagem cadastrada para a escola, uma imagem padrão é exibida automaticamente via operador lógico curto-circuito (`||`).
+
+---
+
+<div align="center">
+  <sub>Projeto desenvolvido com ❤️ usando React e React-Bootstrap.</sub>
+</div>
