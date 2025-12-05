@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <main>
       <Carrossel />
-      {/* Cartões da IE */}
+      {}
       <Container>
         <h3 className="my-4 text-center">Os 3 Melhores do Censo 2024</h3>
         <Row>
