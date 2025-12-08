@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <main>
       <Carrossel />
-      {/* Cartões da IE */}
+      {}
       <Container>
         <h3 className="my-4 text-center">Os 3 Melhores do Censo 2024</h3>
         <Row>
@@ -36,7 +36,7 @@ const Main = () => {
                     <Card.Img variant="top" src={imagemEscola} className="card-img-fixed" />
                   </div>
 
-                  {/* A cor é aplicada aqui */}
+                  {}
                   <Card.Body className={`card-color-${index}`}>
                     <Card.Title>{escola.no_entidade}</Card.Title>
                     <Card.Text>
